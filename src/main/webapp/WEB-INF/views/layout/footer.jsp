@@ -4,7 +4,7 @@
 <div class="jumbotron text-center" style="margin-bottom: 0">
 	<p>하하하</p>
 </div>
-
+<script src="/js/header.js"></script>
 <script>
 
 
@@ -91,8 +91,9 @@ function goPaymentAPI(productname,price,email,name,phonenumber,id,address){
 		}
 
 		function logout() {
-			alert("실행안됨?");
-			location.href = "/auth/loginForm";
+			alert("로그아웃 실행되냐?");
+			
+			location.href = "/user/logout";
 		}
 		
 		function goLoginCheck(){

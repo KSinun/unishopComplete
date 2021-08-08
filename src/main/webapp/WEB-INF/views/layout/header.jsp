@@ -155,17 +155,18 @@
 									<c:otherwise>
 
 										<div>
-											<a href="/myPage"><img
+											<a href="/bucket/${principal.id}"><img
 												src="https://img.icons8.com/windows/32/000000/shopping-cart.png" /></a>
 										</div>
 
 										<div>
-											<a href="/product" onclick="logout()"><img
+											<a href="/myPage"><img
 												src="https://img.icons8.com/windows/32/000000/user-male-circle.png" /></a>
 											<!-- 여기 로그아웃이미지 삽입 -->
 											<!-- 일단 버튼으로 때웁니다 -->
 											<button type="button" class="btn btn-light"
-												onclick="goLogin()">Login out</button>
+												onclick="logout()">Login out</button>
+<!-- 												"location.href='/user/logout'" -->
 										</div>
 									</c:otherwise>
 								</c:choose>

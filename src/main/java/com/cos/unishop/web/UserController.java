@@ -161,4 +161,12 @@ public class UserController {
         return "ok";
     }
 
+    
+    // 로그아웃 하는 컨트롤러
+    @GetMapping("/user/logout")
+	public String logout() {
+    	System.out.println("로그아웃 됩니까? 네 됩니다!");
+		session.invalidate();
+		return "redirect:/";
+	}
 }

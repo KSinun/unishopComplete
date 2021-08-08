@@ -51,7 +51,8 @@
 							<div class="button-wrap">
 								<button class="w-100 btn btn-lg btn-primary" type="submit"
 									style="background-color: #f5f5f5; border: #f8f9fa; color: #383838;"
-									onclick="goBucket()">Input bucket</button>
+									onclick="inputBucket('${principal.id}','${productEntity.productname}','${productEntity.image}','${productEntity.size}','${productEntity.price}')">Input
+									bucket</button>
 							</div>
 						</div>
 					</c:otherwise>
@@ -87,173 +88,180 @@
 							</div>
 							<div class="modal-body">
 								<!-- 			모달바디 시작 -->
-		<div class="register">
-			<!-- 여기에 폼있어요! -->
-			<form action="/commentSave" method="post" enctype="multipart/form-data">
-<!-- 			상품코드 -->
-			<div>
-					<div class="input-parent">
-						
-						<div class="input-wrap">
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="inputGroup-sizing-default"></span>
-								<input type="number" class="form-control"
-									aria-label="Sizing example input"
-									aria-describedby="inputGroup-sizing-default" value="${productEntity.id}" readonly="readonly" name="productId">
+								<div class="register">
+									<!-- 여기에 폼있어요! -->
+									<form action="/commentSave" method="post"
+										enctype="multipart/form-data">
+										<!-- 			상품코드 -->
+										<div>
+											<div class="input-parent">
+
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<span class="input-group-text"
+															id="inputGroup-sizing-default"></span> <input
+															type="number" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															value="${productEntity.id}" readonly="readonly"
+															name="productId">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="input-parent">
+											<h4>상품 이름</h4>
+											<div class="input-wrap">
+												<div class="input-group mb-3">
+													${productEntity.productname}</div>
+											</div>
+											<section class="product-img">
+
+												<img id="img1" src="/upload/${productEntity.image}"
+													class="rounded float" alt="...">
+
+
+
+
+
+											</section>
+										</div>
+										<div>
+											<div class="input-parent">
+												<h4>이미지 등록</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+
+														<input type="file" class="form-control"
+															id="inputGroupFile02" name="image">
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="input-parent">
+												<h4>만족도 점수</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<span class="input-group-text"
+															id="inputGroup-sizing-default">Default</span> <input
+															type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default" name="score">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="input-parent">
+												<h4>사이즈 만족도</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
+														<input type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															name="sizecs">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="input-parent">
+												<h4>색감 만족도</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
+														<input type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															name="colorcs">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="input-parent">
+												<h4>상품평</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
+														<input type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															name="productcs">
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+
+
+
+
+										<!-- 모달바디끝 -->
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Save
+										changes</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			
-				<div class="input-parent">
-					<h4>상품 이름</h4>
-					<div class="input-wrap">
-						<div class="input-group mb-3">
-							${productEntity.productname}
-						</div>
-					</div>
-					<section class="product-img">
-
-				<img id="img1" src="/upload/${productEntity.image}"
-					class="rounded float" alt="...">
-
-
-
-
-
-			</section>
-				</div>
-				<div>
-					<div class="input-parent">
-						<h4>이미지 등록</h4>
-						<div class="input-wrap">
-							<div class="input-group mb-3">
-
-								<input type="file" class="form-control" id="inputGroupFile02"
-									name="image">
-
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div>
-					<div class="input-parent">
-						<h4>만족도 점수</h4>
-						<div class="input-wrap">
-							<div class="input-group mb-3">
-								<span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-								<input type="text" class="form-control"
-									aria-label="Sizing example input"
-									aria-describedby="inputGroup-sizing-default" name="score">
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div>
-					<div class="input-parent">
-						<h4>사이즈 만족도</h4>
-						<div class="input-wrap">
-							<div class="input-group mb-3">
-								<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
-								<input type="text" class="form-control"
-									aria-label="Sizing example input"
-									aria-describedby="inputGroup-sizing-default" name="sizecs">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="input-parent">
-						<h4>색감 만족도</h4>
-						<div class="input-wrap">
-							<div class="input-group mb-3">
-								<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
-								<input type="text" class="form-control"
-									aria-label="Sizing example input"
-									aria-describedby="inputGroup-sizing-default" name="colorcs">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="input-parent">
-						<h4>상품평</h4>
-						<div class="input-wrap">
-							<div class="input-group mb-3">
-								<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
-								<input type="text" class="form-control"
-									aria-label="Sizing example input"
-									aria-describedby="inputGroup-sizing-default" name="productcs">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				
-
-		
-
-
-
-									<!-- 모달바디끝 -->
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary"
-									data-bs-dismiss="modal">Close</button>
-								<button type="submit" class="btn btn-primary" >Save
-									changes</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			</form>
-			<!-- 댓글 테이블 -->
-			<!-- DB에서 가져와서 던져줌 -->
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">#</th>
-						<th scope="col">이미지</th>
-						<th scope="col">만족도</th>
-						<th scope="col">상품평</th>
-						<th scope="col">사이즈</th>
-						<th scope="col">색감</th>
-						<th scope="col">등록자</th>
-						<th scope="col">등록일</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="comments" items="${commentsEntity}">
+				</form>
+				<!-- 댓글 테이블 -->
+				<!-- DB에서 가져와서 던져줌 -->
+				<table class="table">
+					<thead>
 						<tr>
-							<th scope="row">${comments.id}</th>
-							<td>${comments.image}</td>
-							<td>${comments.score}</td>
-							<td>${comments.productcs}</td>
-							<td>${comments.sizecs}</td>
-							<td>${comments.colorcs}</td>
-							<td>@${comments.user.username}</td>
-							<td>${comments.registrationtime}</td>
+							<th scope="col">#</th>
+							<th scope="col">이미지</th>
+							<th scope="col">만족도</th>
+							<th scope="col">상품평</th>
+							<th scope="col">사이즈</th>
+							<th scope="col">색감</th>
+							<th scope="col">등록자</th>
+							<th scope="col">등록일</th>
 						</tr>
-					</c:forEach>
-					<!--               <tr> -->
-					<!--                 <th scope="row">2</th> -->
-					<!--                 <td>Jacob</td> -->
-					<!--                 <td>넘이뻐요</td> -->
-					<!--                 <td>@fat</td> -->
-					<!--                 <td>21-07-23</td> -->
-					<!--               </tr> -->
-					<!--               <tr> -->
-					<!--                 <th scope="row">1</th> -->
-					<!--                 <td>Larry the Bird</td> -->
-					<!--                 <td>사랑합니다~</td> -->
-					<!--                 <td>@twitter</td> -->
-					<!--                 <td>21-07-21</td> -->
-					<!--               </tr> -->
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						<c:forEach var="comments" items="${commentsEntity}">
+							<tr>
+								<th scope="row">${comments.id}</th>
+								<td>${comments.image}</td>
+								<td>${comments.score}</td>
+								<td>${comments.productcs}</td>
+								<td>${comments.sizecs}</td>
+								<td>${comments.colorcs}</td>
+								<td>@${comments.user.username}</td>
+								<td>${comments.registrationtime}</td>
+							</tr>
+						</c:forEach>
+						<!--               <tr> -->
+						<!--                 <th scope="row">2</th> -->
+						<!--                 <td>Jacob</td> -->
+						<!--                 <td>넘이뻐요</td> -->
+						<!--                 <td>@fat</td> -->
+						<!--                 <td>21-07-23</td> -->
+						<!--               </tr> -->
+						<!--               <tr> -->
+						<!--                 <th scope="row">1</th> -->
+						<!--                 <td>Larry the Bird</td> -->
+						<!--                 <td>사랑합니다~</td> -->
+						<!--                 <td>@twitter</td> -->
+						<!--                 <td>21-07-21</td> -->
+						<!--               </tr> -->
+					</tbody>
+				</table>
 		</section>
 	</div>
 </main>
@@ -270,4 +278,5 @@
 		location.href = "/product/payment/" + id;
 	}
 </script>
+<script src="/js/bucket.js"></script>
 <%@ include file="../layout/footer.jsp"%>

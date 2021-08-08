@@ -18,7 +18,7 @@
               <div class="collapse show" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li><a href="/CommentsManagement" class="link-dark rounded">Comments management</a></li>
-                  <li><a href="/bucket" class="link-dark rounded">Shopping bucket</a></li>
+                  <li><a href="/bucket/${principal.id}" class="link-dark rounded">Shopping bucket</a></li>
                   <li><a href="/payment/${principal.id}" class="link-dark rounded">Payment list</a></li>
                 </ul>
               </div>
