@@ -65,6 +65,9 @@
 
 		<!-- 고객 상품평 -->
 		<section class="member-comments-box">
+			<button type="button" class="pyong-btn" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					상품평 쓰기</button>
 			<!-- 모달 사용해서 상품평 바로 테이블에 넣기 -->
 			<!-- URL:https://getbootstrap.com/docs/5.0/components/modal/ -->
 
@@ -261,9 +264,7 @@
 					
 				</table>
 				<!-- Button trigger modal -->
-				<button type="button" class="pyong-btn" data-bs-toggle="modal"
-					data-bs-target="#exampleModal">
-					상품평 쓰기</button>
+				
 		</section>
 	</div>
 </main>

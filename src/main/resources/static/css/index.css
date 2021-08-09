@@ -24,6 +24,7 @@ hr {
 .new-main {
 	display: flex;
 	margin: 0 auto;
+	flex: initial;
 	padding: 16px 0px;
 	width: 1200px;
 }
@@ -47,4 +48,7 @@ p, h1, h2, h3 {
 	padding: 20px 0px;
 /* 	width: 1200px; */
 /* 	width:70%; */
+}
+.index-column {
+	width: 300px;
 }

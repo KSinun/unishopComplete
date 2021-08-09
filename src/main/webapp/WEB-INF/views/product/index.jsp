@@ -66,21 +66,37 @@
 <!-- 	여기부터 상품진열시작 -->
 <div class="new-main">
 
+	<!--수정ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇt-->
 <c:forEach var="products" items="${productsEntity}">
 	<a href="/product/productPage">
 		<div class="index-content-img">
 			<img
 				src="/upload/${products.image}"
-				class="rounded float-start" alt="...">
+				class="index-column float-start" alt="...">
 
 		</div>
 	</a>
-</c:forEach>	
+</c:forEach>
+<div class="new-main-products">
 	
-	<div class="index-content-img">
-		<img
-			src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80"
-			class="rounded float-end" alt="...">
+		
+	<c:forEach var="product" items="${productsEntity}">
+		<div class="products">
+			<div class="content-img">
+				
+
+				<a href="/product/${product.id}">
+					<div class="content-wrap-img">
+
+						<img
+							src="/upload/${product.image}"
+							class="rounded float-start" alt="...">
+
+					</div>
+				</a>
+			</div>	
+	<!--수정ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ-->
+	
 
 	</div>
 

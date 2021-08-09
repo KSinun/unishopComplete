@@ -24,7 +24,7 @@
 									management</a></li>
 							<li><a href="/bucket/${principal.id}" class="link-dark rounded">Shopping
 									bucket</a></li>
-							<li><a href="#" class="link-dark rounded">Payment list</a></li>
+							<li><a href="/payment/${principal.id}" class="link-dark rounded">Payment list</a></li>
 						</ul>
 					</div>
 				</li>
@@ -82,7 +82,7 @@
 					
 						<c:forEach var="bucketProduct" items="${bucketProductsEntity}">
 						<!-- 한줄 시작 -->
-						<tr>
+						<tr class="bucket-flex-well">
 							<!-- th, for문으로 돌립니다 -->
 							<!-- 나중에 여기에 EL 표현식으로 뿌려줍니다 -->
 							<th scope="row">

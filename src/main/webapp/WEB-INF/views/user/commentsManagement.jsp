@@ -93,7 +93,7 @@
 			<!-- 댓글 테이블 -->
 			<!-- DB에서 가져와서 던져줌 -->
 			<table class="table">
-				<thead>
+				<thead class="category-management">
 					<tr>
 						<th scope="col">#</th>
 						<th scope="col">이미지</th>
@@ -103,15 +103,16 @@
 						<th scope="col">색감</th>
 						<th scope="col">등록자</th>
 						<th scope="col">등록일</th>
-						<th scope="col">수정 / 삭제</th>
+						<th scope="col">수정하기</th>
+						<th scope="col">삭제</th>
 
 					</tr>
 				</thead>
-				<tbody>
+				<tbody class="category-management">
 					<c:forEach var="comments" items="${commentsEntity}">
 						<tr>
 							<th scope="row">${comments.id}</th>
-							<td>${comments.image}</td>
+							<td><img id="img1" src="/upload/${comments.image}" class="modal-img float" alt="..."></td>
 							<td>${comments.score}</td>
 							<td>${comments.productcs}</td>
 							<td>${comments.sizecs}</td>
@@ -119,8 +120,11 @@
 							<td>@${comments.user.username}</td>
 							<td>${comments.registrationtime}</td>
 							<td><button type="button" class="pyong-btn" data-bs-toggle="modal"
-					data-bs-target="#exampleModal">
-					상품평 쓰기</button></td>
+							data-bs-target="#exampleModal">
+							수정하기</button></td>
+							<td><button type="button" class="pyong-btn" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">
+							삭제</button></td>
 						</tr>
 						
 					</c:forEach>

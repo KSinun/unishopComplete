@@ -99,8 +99,7 @@
 
 .input-comments {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -108,14 +107,14 @@
   background-color: #f5f5f5;
   border: #f8f9fa;
   color: #383838;
-  width: 120px;
-  height: 60px;
+  width: 80px;
+  height: 50px;
   border-radius: 10px;
+  float: right;
 }
 
 .modal-img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
 }
 
 .modal-img2 {
@@ -141,4 +140,13 @@
 
 .product-img-main {
   width: 700px;
+}
+
+.category-management {
+  text-align: center;
+}
+
+.bucket-flex-well {
+  display: flex;
+  justify-content: space-between;
 }

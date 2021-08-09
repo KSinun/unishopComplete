@@ -116,17 +116,7 @@
           <!-- DB에서 가져와서 던져줌 -->
           <table class="table">
             <thead>
-              <tr>
-                <th scope="col">구매 일자</th>
-                <th class="th-align" scope="col">
-                  상품정보
-                </th>
-                <th scope="col">판매가</th>
-                <th scope="col">수량</th>
-                <th scope="col">합계</th>
-                <th scope="col"></th>
-                
-              </tr>
+              
             </thead>
             <tbody>
             
@@ -160,7 +150,7 @@
                     </div>
 
                     <!-- 제품 이름 -->
-                    <div class="product-inforamtion" style="font-weight: 800;">
+                    <div class="product-inforamtion" style="font-weight: bold;">
                       ${buy.product.productname}
                     </div>
 
