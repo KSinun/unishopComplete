@@ -58,6 +58,14 @@
 
 
 
+		<!-- 장바구니 탭 글자들 -->
+		<!-- DB에서 가져와서 던져줌 -->
+		<table class="tab-text">
+			<thead>
+				<td class="line-bucket"></td>
+			</thead>
+		</table>
+
 		<div>
 			<!-- <h4>내가 쓴 상품평</4> -->
 		</div>
@@ -69,19 +77,7 @@
 				
 
 				<!-- 장바구니 테이블 -->
-				<!-- DB에서 가져와서 던져줌 -->
-				<table class="table">
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th class="th-align" scope="col">상품정보</th>
-							<th scope="col">판매가</th>
-							<th scope="col">수량</th>
-							<th scope="col">합계</th>
-							<th scope="col">삭제</th>
-
-						</tr>
-					</thead>
+					<table class="table">
 					<tbody>
 					
 						<c:forEach var="bucketProduct" items="${bucketProductsEntity}">
@@ -103,7 +99,7 @@
 
 
 							<!-- 상품정보 -->
-							<td>
+							<td class="product-info-master">
 								<div class="product-info-box">
 									<div class="minibox-img">
 										<!-- 이미지 -->
@@ -118,7 +114,7 @@
 
 									<!-- 사이즈 -->
 									<div class="product-size">
-										size
+										사이즈
 										<!-- 여기에 사이즈 EL 표현식 -->
 										<input class="num-wrap" value="${bucketProduct.size}" readonly>
 									</div>
@@ -136,32 +132,13 @@
 								<td>
 									<div class="info-align-box">
 										<!-- 여기에 EL표현식으로 가격을 받아옵니다 -->
-										${bucketProduct.price}
 									</div>
 								</td>
-								<!-- 수량 -->
-								<td>
-									<div class="info-align-box">
-										<!-- 수량 박스 -->
-										<div>
-											<input class="num-wrap" value="2" readonly>
-										</div>
 
-										<div class="up-and-down">
-											<img
-												src="https://img.icons8.com/material-outlined/24/000000/up.png" />
-											<img
-												src="https://img.icons8.com/material-outlined/24/000000/down--v1.png" />
-										</div>
-
-									</div>
-								</td>
-								<!-- 합계 -->
-								<!-- 계산되어서 되는 합계 추가 -->
 								<td>
 									<div class="info-align-box">
 										<div>
-											<input class="all-count" value="47.98$" readonly>
+											<input class="all-count" value="${bucketProduct.price}" readonly>
 										</div>
 
 									</div>

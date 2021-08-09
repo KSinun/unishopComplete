@@ -37,12 +37,12 @@
 				<input type="text" class="form-control" placeholder="Input Email"
 					name="email">
 			</div>
-			<input class="btn btn-info" type="button" onClick="goPopup();"
+			<input class="btn btn-info" type="button" onClick="goPopup()"
 				value="findaddress" />
 			<div class="mb-3">
 				<label for="formGroupExampleInput" class="form-label">Address</label>
 				<input type="text" class="form-control" placeholder="Input Address"
-					name="address" id="address">
+					name="address" id="address" readonly>
 			</div>
 			<%--서브주소 나중에구현 <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Address2</label>
@@ -56,5 +56,29 @@
 		</form>
 	</main>
 </div>
+
+<script>
+		async function acceptNumber(){
+			alert("주소");
+			
+			let phoneNumber = document.querySelector("#textsms").value;
+			alert(phoneNumber);
+			
+			fetch("/auth/findIdsms?phoneNumber="+phoneNumber);
+		}
+		
+		function goPopup() {
+
+			var pop = window.open("/juso", "pop",
+					"width=570,height=420, scrollbars=yes, resizable=yes");
+
+		}
+
+		function jusoCallBack(roadFullAddr) {
+			let addressEL = document.querySelector("#address");
+			addressEL.value = roadFullAddr;
+			console.log(addressEL)
+		}
+</script>
 
 <%@ include file="../layout/footer.jsp"%>

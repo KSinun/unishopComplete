@@ -118,8 +118,13 @@
 							<td>${comments.colorcs}</td>
 							<td>@${comments.user.username}</td>
 							<td>${comments.registrationtime}</td>
+							<td><button type="button" class="pyong-btn" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">
+					상품평 쓰기</button></td>
 						</tr>
+						
 					</c:forEach>
+						
 <!-- 					<tr> -->
 <!-- 						<th scope="row">2</th> -->
 <!-- 						<td>Jacob</td> -->
@@ -146,6 +151,164 @@
 <!-- 					</tr> -->
 				</tbody>
 			</table>
+			<!-- 고객 상품평 -->
+		<section class="member-comments-box">
+			<!-- 모달 사용해서 상품평 바로 테이블에 넣기 -->
+			<!-- URL:https://getbootstrap.com/docs/5.0/components/modal/ -->
+
+			<!-- 상품평 쓰기 -->
+			<div class="input-comments">
+				<!-- Button trigger modal -->
+				
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1"
+					aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel"></h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<!-- 			모달바디 시작 -->
+								<div class="modal-start">
+									<!-- 여기에 폼있어요! -->
+									<form action="/commentSave" method="post"
+										enctype="multipart/form-data">
+										<!-- 			상품코드 -->
+										<div>
+											<div class="input-parent">
+
+												<div class="input-wrap" style="display: none;">
+													<div class="input-group mb-3">
+														<span class="input-group-text"
+															id="inputGroup-sizing-default"></span> <input
+															type="number" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															value="${productEntity.id}" readonly="readonly"
+															name="productId">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="modal-flex">
+											
+												
+											
+											<section class="modal-img1">
+
+												<img id="img-modal" src="/upload/${productEntity.image}"
+													class="modal-img" alt="...">
+													<div class="modal-text">
+													${productEntity.productname}</div>
+												
+
+
+
+
+											</section>
+										</div>
+										<div>
+											<div class="input-parent">
+												<h4>이미지 등록</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+
+														<input type="file" class="form-control"
+															id="inputGroupFile02" name="image">
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="input-parent">
+												<h4>만족도 점수</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<span class="input-group-text"
+															id="inputGroup-sizing-default">별점</span> <input
+															type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default" name="score">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="input-parent">
+												<h4>사이즈 만족도</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
+														<input type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															name="sizecs">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="input-parent">
+												<h4>색감 만족도</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
+														<input type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															name="colorcs">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="input-parent">
+												<h4>상품평</h4>
+												<div class="input-wrap">
+													<div class="input-group mb-3">
+														<!-- <span class="input-group-text" id="inputGroup-sizing-default">Default</span> -->
+														<input type="text" class="form-control"
+															aria-label="Sizing example input"
+															aria-describedby="inputGroup-sizing-default"
+															name="productcs">
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+
+
+
+
+										<!-- 모달바디끝 -->
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Save
+										changes</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</form>
+					</tbody>
+					
+				</table>
+				<!-- Button trigger modal -->
+				
+		</section>
 		</section>
 		<!-- comments box end -->
 
