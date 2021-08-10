@@ -56,7 +56,7 @@
         <br>
         <!-- log 테이블 -->
         <!-- DB에서 가져와서 던져줌 -->
-        <table class="table">
+        <table class="table" style="">
           <thead>
             <tr>
               <th scope="col"></th>

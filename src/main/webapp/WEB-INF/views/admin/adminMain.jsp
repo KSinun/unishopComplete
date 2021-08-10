@@ -4,6 +4,8 @@
 <%@ include file="../layout/header.jsp" %>
 <!-- 비정상적으로 요소가 배치되는 것을 수정해야합니다 -->
 
+
+
     <main class="sidebar-main">
     <!--side bar-->
       <div class="sidebars">
@@ -49,7 +51,7 @@
           <h2 id="h2">상품 수정 / 삭제</h2>
         </div>
 
-        <hr id="hr"/>
+        
         
         <table class="table">
 				<thead class="category-management">
@@ -67,29 +69,30 @@
 
 					</tr>
 				</thead>
-				<tbody>
-					<c:forEach var="product" items="${productsEntity}">
-						<tr>
-							<th scope="row">${product.id}</th>
-							<td><img id="img1" src="/upload/${product.image}" class="modal-img float" alt="..."></td>
-							<td>${product.productname}</td>
-							<td>${product.size}</td>
-							<td>${product.gender}</td>
-							<td>@${product.detail}</td>
-							<td>${product.category}</td>
-              <td>${product.price}</td>
-							<td><button type="button" class="pyong-btn">
-							수정하기</button></td>
-							<td><button type="button" class="pyong-btn">
-							삭제</button></td>
-							
-						</tr>
-						
-					</c:forEach>
-						
+				<tbody class="category-management">
+          <c:forEach var="product" items="${productsEntity}">
+              <tr>
+                <th scope="row">${product.id}</th>
+                <td><img id="img1" src="/upload/${product.image}" class="modal-img float" alt="..."></td>
+                <td>${product.productname}</td>
+                <td>${product.size}</td>
+                <td>${product.gender}</td>
+                <td>@${product.detail}</td>
+                <td>${product.category}</td>
+                <td>${product.price}</td>
+                <td><button type="button" class="pyong-btn" style="margin-inline: 10%;">
+                수정하기</button>
+                <button type="button" class="pyong-btn">
+                삭제</button>
+                </td>
+                
+                
+              </tr>
+            
+            </c:forEach>
 				</tbody>
 			</table>
-
+      
 	
         
       

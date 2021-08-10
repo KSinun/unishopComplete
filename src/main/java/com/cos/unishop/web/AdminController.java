@@ -8,7 +8,9 @@ import java.util.UUID;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.cos.unishop.domain.payment.Payment;
@@ -31,7 +33,8 @@ public class AdminController {
 
 	// 관리자페이지 메인ㄱㄱ
 	@GetMapping("/admin/main")
-	public String adminMain() {
+	public String adminMain(Model model) {
+		model.addAttribute("productsEntity", productRepository.findAll());
 		return "admin/adminMain";
 	}
 
