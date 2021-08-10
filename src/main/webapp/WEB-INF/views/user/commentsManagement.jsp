@@ -106,7 +106,6 @@
 						<th scope="col">상품평</th>
 						<th scope="col">수정하기 / 삭제</th>
 
-
 					</tr>
 				</thead>
 				<tbody class="category-management">
@@ -123,7 +122,6 @@
 							<button type="button" class="pyong-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 20px;">수정하기</button>
 							<button type="button" class="pyong-btn">삭제</button>
 							</td>
-							
 						</tr>
 						
 					</c:forEach>
