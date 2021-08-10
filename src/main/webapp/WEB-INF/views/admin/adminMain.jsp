@@ -86,7 +86,6 @@
                 삭제</button>
                 </td>
                 
-                
               </tr>
             
             </c:forEach>
