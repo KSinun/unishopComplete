@@ -29,15 +29,16 @@
 					<thead>
 						<tr>
 							<th scope="col"></th>
-							<th class="th-align" scope="col">ìíì ë³´</th>
-							<th scope="col">íë§¤ê°</th>
-							<th scope="col">ìë</th>
-							<th scope="col">í©ê³</th>
+							<th class="th-align" scope="col">상품정보</th>
+							<th scope="col">상품가격</th>
+
 							<th scope="col"></th>
 
 						</tr>
 					</thead>
 					<tbody>
+						
+
 						<!-- íì¤ ìì -->
 						<tr>
 							<!-- th, forë¬¸ì¼ë¡ ëë¦½ëë¤ -->
@@ -101,10 +102,6 @@
 								<td>
 									<div class="info-align-box">
 
-										<!-- ì¬ê¸°ì ìë ë°ì¤ ì¶ê° -->
-										<div>
-											<input class="num-wrap" value="2" readonly>
-										</div>
 
 										<!-- <div class="up-and-down">
                           <img src="https://img.icons8.com/material-outlined/24/000000/up.png"/>
@@ -114,15 +111,7 @@
 									</div>
 								</td>
 								<!-- í©ê³ -->
-								<!-- ê³ì°ëì´ì ëë í©ê³ ì¶ê° -->
-								<td>
-									<div class="info-align-box">
-										<div>
-											<input class="all-count" value="47.98$" readonly>
-										</div>
 
-									</div>
-								</td>
 								<!-- <td>
                     <div class="info-align-box">
                       <button type="button" class="btn btn-danger">
@@ -138,209 +127,12 @@
 
 
 
-						<!-- íì¤ ìì -->
-						<tr>
-							<!-- th, forë¬¸ì¼ë¡ ëë¦½ëë¤ -->
-							<!-- ëì¤ì ì¬ê¸°ì EL ííìì¼ë¡ ë¿ë ¤ì¤ëë¤ -->
-							<th scope="row">
-								<!-- ì²´í¬ë°ì¤ -->
-								<div class="info-align-box">
-									<!-- <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                      
-                      </label>
-                    </div> -->
-								</div>
-							</th>
-
-
-
-							<!-- ìíì ë³´ -->
-							<!-- ì¬ê¸°ìì ìí ì´ë¦ì í´ë¦­íë©´ ê·¸ ìíì í´ë¹íë detailì ë¿ë¦¬ë ê¸°ë¥ ì¶ê° -->
-							<td>
-								<div class="product-info-box">
-									<div class="minibox-img">
-										<!-- ì´ë¯¸ì§ -->
-										<img id="img1"
-											src="https://images.unsplash.com/photo-1577155848406-b53ebd277c72?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-											class="rounded float" alt="...">
-									</div>
-
-									<!-- ì í ì´ë¦ -->
-									<div class="product-inforamtion" style="font-weight: 800;">
-										red checked pattern skirts</div>
-
-									<!-- ì¬ì´ì¦ ì¶ê° -->
-									<!-- ì¬ì´ì¦ ì»´í¬ëí¸ ì¶ê° -->
-									<div class="product-size">
-										size
-										<!-- ì¬ê¸°ì ì¬ì´ì¦ EL ííì -->
-										<input class="num-wrap" value="M">
-									</div>
-									<!-- ìí íì´ì§ ë²í¼ -->
-									<!-- ì¬ê¸°ì DBì°ëí´ì ìí íì´ì§ ì ë³´ë¥¼ ë°ìì ë°ë¡ ê° ì ìê² í©ëë¤ -->
-									<!-- <div class="product-button">
-                      <button type="button" class="btn btn-light" style="margin-left: 20px;" href="#">ìí íì´ì§</button>   
-                    </div> -->
-								</div>
-
-							</td>
-
-
-
-							<div class="info-align">
-								<!-- ê°ê²© -->
-								<td>
-									<div class="info-align-box">
-										<!-- ì¬ê¸°ì ELííìì¼ë¡ ê°ê²©ì ë°ììµëë¤ -->
-										23.99$
-									</div>
-								</td>
-								<!-- ìë -->
-								<!-- ìë ì»´í¬ëí¸ ì¶ê° -->
-								<td>
-									<div class="info-align-box">
-
-										<!-- ì¬ê¸°ì ìë ë°ì¤ ì¶ê° -->
-										<div>
-											<input class="num-wrap" value="2" readonly>
-										</div>
-
-										<!-- <div class="up-and-down">
-                          <img src="https://img.icons8.com/material-outlined/24/000000/up.png"/>
-                          <img src="https://img.icons8.com/material-outlined/24/000000/down--v1.png"/>
-                        </div> -->
-
-									</div>
-								</td>
-								<!-- í©ê³ -->
-								<!-- ê³ì°ëì´ì ëë í©ê³ ì¶ê° -->
-								<td>
-									<div class="info-align-box">
-										<div>
-											<input class="all-count" value="47.98$" readonly>
-										</div>
-
-									</div>
-								</td>
-								<td>
-									<!-- <div class="info-align-box">
-                      <button type="button" class="btn btn-danger">
-                        ì­ì 
-
-                      </button>
-                    </div> -->
-								</td>
-
-							</div>
-						</tr>
-						<!-- íì¤ ì¢ë£ -->
-
-
-						<!-- íì¤ ìì -->
-						<tr>
-							<!-- th, forë¬¸ì¼ë¡ ëë¦½ëë¤ -->
-							<!-- ëì¤ì ì¬ê¸°ì EL ííìì¼ë¡ ë¿ë ¤ì¤ëë¤ -->
-							<th scope="row">
-								<!-- ì²´í¬ë°ì¤ -->
-								<div class="info-align-box">
-									<!-- <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                      
-                      </label>
-                    </div> -->
-								</div>
-							</th>
-
-
-
-							<!-- ìíì ë³´ -->
-							<!-- ì¬ê¸°ìì ìí ì´ë¦ì í´ë¦­íë©´ ê·¸ ìíì í´ë¹íë detailì ë¿ë¦¬ë ê¸°ë¥ ì¶ê° -->
-							<td>
-								<div class="product-info-box">
-									<div class="minibox-img">
-										<!-- ì´ë¯¸ì§ -->
-										<img id="img1"
-											src="https://images.unsplash.com/photo-1590400516695-36708d3f964a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
-											class="rounded float" alt="...">
-									</div>
-
-									<!-- ì í ì´ë¦ -->
-									<div class="product-inforamtion" style="font-weight: 800;">
-										white skirts</div>
-
-									<!-- ì¬ì´ì¦ ì¶ê° -->
-									<!-- ì¬ì´ì¦ ì»´í¬ëí¸ ì¶ê° -->
-									<div class="product-size">
-										size
-										<!-- ì¬ê¸°ì ì¬ì´ì¦ EL ííì -->
-										<input class="num-wrap" value="M">
-									</div>
-									<!-- ìí íì´ì§ ë²í¼ -->
-									<!-- ì¬ê¸°ì DBì°ëí´ì ìí íì´ì§ ì ë³´ë¥¼ ë°ìì ë°ë¡ ê° ì ìê² í©ëë¤ -->
-									<!-- <div class="product-button">
-                      <button type="button" class="btn btn-light" style="margin-left: 20px;" href="#">ìí íì´ì§</button>   
-                    </div> -->
-								</div>
-
-							</td>
-
-
-
-							<div class="info-align">
-								<!-- ê°ê²© -->
-								<td>
-									<div class="info-align-box">23.99$</div>
-								</td>
-								<!-- ìë -->
-								<!-- ìë ì»´í¬ëí¸ ì¶ê° -->
-								<td>
-									<div class="info-align-box">
-
-										<!-- ì¬ê¸°ì ìë ë°ì¤ ì¶ê° -->
-										<div>
-											<input class="num-wrap" value="2" readonly>
-										</div>
-
-										<!-- <div class="up-and-down">
-                          <img src="https://img.icons8.com/material-outlined/24/000000/up.png"/>
-                          <img src="https://img.icons8.com/material-outlined/24/000000/down--v1.png"/>
-                        </div> -->
-
-									</div>
-								</td>
-								<!-- í©ê³ -->
-								<!-- ê³ì°ëì´ì ëë í©ê³ ì¶ê° -->
-								<td>
-									<div class="info-align-box">
-										<div>
-											<input class="all-count" value="47.98$" readonly>
-										</div>
-
-									</div>
-								</td>
-								<td>
-									<!-- <div class="info-align-box">
-                      <button type="button" class="btn btn-danger">
-                        ì­ì 
-
-                      </button>
-                    </div> -->
-								</td>
-
-							</div>
-						</tr>
-						<!-- íì¤ ì¢ë£ -->
-
-
-
-
-						<!-- êµ¬ë²ì  -->
-						<!-- íì¤ ìì -->
+							
 
 						<!-- íì¤ ì¢ë£ -->
+
+
+
 
 					</tbody>
 				</table>

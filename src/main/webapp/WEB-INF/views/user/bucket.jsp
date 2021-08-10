@@ -77,12 +77,12 @@
 				
 
 				<!-- 장바구니 테이블 -->
-					<table class="table">
+				<table class="table">
 					<tbody>
 					
 						<c:forEach var="bucketProduct" items="${bucketProductsEntity}">
 						<!-- 한줄 시작 -->
-						<tr class="bucket-flex-well">
+						<tr class="">
 							<!-- th, for문으로 돌립니다 -->
 							<!-- 나중에 여기에 EL 표현식으로 뿌려줍니다 -->
 							<th scope="row">
@@ -113,15 +113,14 @@
 										${bucketProduct.productname}</div>
 
 									<!-- 사이즈 -->
-									<div class="product-size">
-										사이즈
-										<!-- 여기에 사이즈 EL 표현식 -->
+									<div class="product-size" style="display: flex; margin-left: 5px;">
 										<input class="num-wrap" value="${bucketProduct.size}" readonly>
+										<!-- 여기에 사이즈 EL 표현식 -->
 									</div>
 									<!-- 상품 페이지 버튼 -->
 									<div class="product-button">
 										<button type="button" class="btn btn-light"
-											style="margin-left: 20px;" href="#">상품 페이지</button>
+											style="margin-left: 40px;" href="#">상품 페이지</button>
 									</div>
 								</div>
 
@@ -145,7 +144,7 @@
 								</td>
 								<td>
 									<div class="info-align-box">
-										<button type="button" class="btn btn-danger" onclick = "selectProductDelete()">삭제</button>
+										<button type="button" class="btn-util btn-danger" onclick = "selectProductDelete()">삭제</button>
 									</div>
 								</td>
 
@@ -170,8 +169,8 @@
 								<div>전체선택</div>
 							</label>
 						</div>
-						<button type="button" class="btn btn-danger" onclick = "selectProductDelete(${principal.id})">삭제</button>
-						<button type="button" class="btn btn-success" onclick="buy(${bucketProductEntity.id})">주문하기</button>
+						<button type="button" class="btn-util btn-danger" onclick = "selectProductDelete(${principal.id})">삭제</button>
+						<button type="button" class="btn-sujung btn-success" onclick="buy(${bucketProductEntity.id})">주문하기</button>
 					</div>
 
 				</div>

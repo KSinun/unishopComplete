@@ -15,54 +15,23 @@
           <ul class="list-unstyled ps-0">
             <li class="mb-1">
               <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                Product Management
+                상품관리
               </button>
               <div class="collapse show" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="/admin/main" class="link-dark rounded">Overview</a></li>
-                  <li><a href="/admin/productRegister" class="link-dark rounded">New</a></li>
-                  <li><a href="#" class="link-dark rounded">Delete</a></li>
-                  <li><a href="#" class="link-dark rounded">Reports</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                Dashboard
-              </button>
-              <div class="collapse" id="dashboard-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">Overview</a></li>
-                  <li><a href="#" class="link-dark rounded">Weekly</a></li>
-                  <li><a href="#" class="link-dark rounded">Monthly</a></li>
-                  <li><a href="#" class="link-dark rounded">Annually</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                Orders
-              </button>
-              <div class="collapse" id="orders-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="/admin/userLog" class="link-dark rounded">New</a></li>
-                  <li><a href="#" class="link-dark rounded">Processed</a></li>
-                  <li><a href="#" class="link-dark rounded">Shipped</a></li>
-                  <li><a href="#" class="link-dark rounded">Returned</a></li>
+                  <li><a href="/admin/main" class="link-dark rounded">상품 수정 / 삭제</a></li>
+                  <li><a href="/admin/productRegister" class="link-dark rounded">상품 생성</a></li>
                 </ul>
               </div>
             </li>
             <li class="border-top my-3"></li>
             <li class="mb-1">
               <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                Account
+                계정
               </button>
               <div class="collapse" id="account-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark rounded">New...</a></li>
-                  <li><a href="#" class="link-dark rounded">Profile</a></li>
-                  <li><a href="#" class="link-dark rounded">Settings</a></li>
-                  <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                  <li><a href="#" class="link-dark rounded">로그아웃</a></li>
                 </ul>
               </div>
             </li>
@@ -72,228 +41,20 @@
     <!--side bar End-->
 
     <!--Admin section-->
+
+
       <section class="admin-section">
         <div>
-          <h2 id="h2">Overview</h2>
+          <h2 id="h2">상품 수정 / 삭제</h2>
         </div>
 
         <hr id="hr"/>
-
-        <div class="contents-container">
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
-          
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
-
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
         
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
-          
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
-
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
         
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
 
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
-          
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
-
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
+	
         
-          <div class="contents">
-            
-            <p>contents</p>
-            <!--DB에서 가져와서 for문 돌림-->
-            <!--img-->
-            <div>
-              <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=349&q=80">
-            </div>
-            <!--information(Code for clothes, clothes name)-->
-            <div>
-              <p>${ProductCode}</p>
-            </div>
-            <!--price-->
-            <div>
-              <p>${ProductPrice}</p>
-            </div>
-            <hr/>
-          </div>
-
-
-
-
-        </div>
-
+      
       </section>
 
     </main>

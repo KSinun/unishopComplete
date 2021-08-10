@@ -64,43 +64,31 @@
 <!--Main-content-->
 <h3>Women</h3>
 <!-- 	여기부터 상품진열시작 -->
-<div class="new-main">
 
-	<!--수정ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇt-->
-<c:forEach var="products" items="${productsEntity}">
-	<a href="/product/productPage">
-		<div class="index-content-img">
-			<img
-				src="/upload/${products.image}"
-				class="index-column float-start" alt="...">
-
-		</div>
-	</a>
-</c:forEach>
 <div class="new-main-products">
 	
-		
 	<c:forEach var="product" items="${productsEntity}">
+	<c:if test="${product.gender eq 'WOMAN'}">
 		<div class="products">
 			<div class="content-img">
 				
 
-				<a href="/product/${product.id}">
+				<a href="/product/productPage">
 					<div class="content-wrap-img">
 
 						<img
 							src="/upload/${product.image}"
 							class="rounded float-start" alt="...">
-
 					</div>
 				</a>
-			</div>	
-	<!--수정ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ-->
+			</div>
+		</div>
+		</c:if>
+	</c:forEach>	
 	
-
-	</div>
-
 </div>
+
+
 
 <div class="new-main">
 	<div class="index-content-img">
@@ -118,6 +106,31 @@
 </div>
 
 <h3>Man</h3>
+
+<div class="new-main-products">
+	
+	<c:forEach var="product" items="${productsEntity}">
+	<c:if test="${product.gender eq 'MAN'}">
+		<div class="products">
+			<div class="content-img">
+				
+
+				<a href="/product/productPage">
+					<div class="content-wrap-img">
+
+						<img
+							src="/upload/${product.image}"
+							class="rounded float-start" alt="...">
+					</div>
+				</a>
+			</div>
+		</div>
+		</c:if>
+	</c:forEach>	
+
+</div>
+
+
 
 
 <div class="new-main">

@@ -178,33 +178,7 @@
                      ${buy.product.price}$
                     </div>
                   </td>
-                  <!-- 수량 -->
-                  <!-- 수량 컴포넌트 추가 -->
-                  <td>
-                    <div class="info-align-box">
-                      
-                        <!-- 여기에 수량 박스 추가 -->
-                        <div>
-                          <input class="num-wrap" value="2" readonly>
-                        </div>
-                        
-                        <!-- <div class="up-and-down">
-                          <img src="https://img.icons8.com/material-outlined/24/000000/up.png"/>
-                          <img src="https://img.icons8.com/material-outlined/24/000000/down--v1.png"/>
-                        </div> -->
-                      
-                    </div>
-                  </td>
-                  <!-- 합계 -->
-                  <!-- 계산되어서 되는 합계 추가 -->
-                  <td>
-                    <div class="info-align-box">
-                      <div>
-                        <input class="all-count" value="47.98$" readonly>
-                      </div>
-                      
-                    </div>
-                  </td>
+
                   <!-- <td>
                     <div class="info-align-box">
                       <button type="button" class="btn btn-danger">
@@ -251,7 +225,7 @@
 
                     <!-- 제품 이름 -->
                     <div class="product-inforamtion" style="font-weight: 800;">
-                      red checked pattern skirts
+                      빨간 스커트
                     </div>
 
                     <!-- 사이즈 추가 -->
@@ -280,34 +254,7 @@
                       23.99$
                     </div>
                   </td>
-                  <!-- 수량 -->
-                  <!-- 수량 컴포넌트 추가 -->
-                  <td>
-                    <div class="info-align-box">
-                      
-                        <!-- 여기에 수량 박스 추가 -->
-                        <div>
-                          <input class="num-wrap" value="2" readonly>
-                        </div>
-                        
-                        <!-- <div class="up-and-down">
-                          <img src="https://img.icons8.com/material-outlined/24/000000/up.png"/>
-                          <img src="https://img.icons8.com/material-outlined/24/000000/down--v1.png"/>
-                        </div> -->
-                      
-                    </div>
-                  </td>
-                  <!-- 합계 -->
-                  <!-- 계산되어서 되는 합계 추가 -->
-                  <td>
-                    <div class="info-align-box">
-                      <div>
-                        <input class="all-count" value="47.98$" readonly>
-                      </div>
-                      
-                    </div>
-                  </td>
-                  <td>
+                 
                     <!-- <div class="info-align-box">
                       <button type="button" class="btn btn-danger">
                         삭제
@@ -339,92 +286,7 @@
 
 
 
-                <!-- 상품정보 -->
-                <!-- 여기에서 상품 이름을 클릭하면 그 상품에 해당하는 detail을 뿌리는 기능 추가 -->
-                <td>
-                  <div class="product-info-box">
-                    <div class="minibox-img">
-                      <!-- 이미지 -->
-                      <img id="img1" src="https://images.unsplash.com/photo-1590400516695-36708d3f964a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80" class="rounded float" alt="...">
-                    </div>
-
-                    <!-- 제품 이름 -->
-                    <div class="product-inforamtion" style="font-weight: 800;">
-                      white skirts
-                    </div>
-
-                    <!-- 사이즈 추가 -->
-                    <!-- 사이즈 컴포넌트 추가 -->
-                    <div class="product-size">
-                      size
-                      <!-- 여기에 사이즈 EL 표현식 -->
-                      <input class="num-wrap" value="M">
-                    </div>
-                    <!-- 상품 페이지 버튼 -->
-                    <!-- 여기에 DB연동해서 상품 페이지 정보를 받아서 바로 갈 수 있게 합니다 -->
-                    <!-- <div class="product-button">
-                      <button type="button" class="btn btn-light" style="margin-left: 20px;" href="#">상품 페이지</button>   
-                    </div> -->
-                  </div>
-
-                </td>
                 
-                
-                
-                <div class="info-align">
-                  <!-- 가격 -->
-                  <td>
-                    <div class="info-align-box">
-                      23.99$
-                    </div>
-                  </td>
-                  <!-- 수량 -->
-                  <!-- 수량 컴포넌트 추가 -->
-                  <td>
-                    <div class="info-align-box">
-                      
-                        <!-- 여기에 수량 박스 추가 -->
-                        <div>
-                          <input class="num-wrap" value="2" readonly>
-                        </div>
-                        
-                        <!-- <div class="up-and-down">
-                          <img src="https://img.icons8.com/material-outlined/24/000000/up.png"/>
-                          <img src="https://img.icons8.com/material-outlined/24/000000/down--v1.png"/>
-                        </div> -->
-                      
-                    </div>
-                  </td>
-                  <!-- 합계 -->
-                  <!-- 계산되어서 되는 합계 추가 -->
-                  <td>
-                    <div class="info-align-box">
-                      <div>
-                        <input class="all-count" value="47.98$" readonly>
-                      </div>
-                      
-                    </div>
-                  </td>
-                  <td>
-                    <!-- <div class="info-align-box">
-                      <button type="button" class="btn btn-danger">
-                        삭제
-
-                      </button>
-                    </div> -->
-                  </td>
-
-                </div>
-              </tr>
-              <!-- 한줄 종료 -->
-
-
-
-              
-              <!-- 구버전 -->
-              <!-- 한줄 시작 -->
-              
-              <!-- 한줄 종료 -->
 
             </tbody>
           </table>

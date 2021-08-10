@@ -28,9 +28,13 @@ public class UserController {
 	// 로그인페이지로 가는컨트롤러
     @GetMapping("/auth/loginForm")
     public String loginForm() {
-    	
-    	
         return "auth/loginForm";
+    }
+
+    // 어드민페이지로 가는컨트롤러
+    @GetMapping("/admin")
+    public String adminMain() {
+        return "admin/adminMain";
     }
 
     // 회원가입페이지로 가는 컨트롤러
