@@ -21,6 +21,7 @@
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li><a href="/admin/main" class="link-dark rounded">상품 수정 / 삭제</a></li>
                   <li><a href="/admin/productRegister" class="link-dark rounded">상품 생성</a></li>
+                  <li><a href="/admin/userLog" class="link-dark rounded">회원 로그</a></li>
                 </ul>
               </div>
             </li>
@@ -50,7 +51,44 @@
 
         <hr id="hr"/>
         
-        
+        <table class="table">
+				<thead class="category-management">
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">이미지</th>
+						<th scope="col">상품명</th>
+            <th scope="col">사이즈</th>
+						<th scope="col">성별</th>
+						<th scope="col">상세설명</th>
+						<th scope="col">카테고리</th>
+						<th scope="col">가격</th>
+						<th scope="col">수정하기 / 삭제</th>
+
+
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="product" items="${productsEntity}">
+						<tr>
+							<th scope="row">${product.id}</th>
+							<td><img id="img1" src="/upload/${product.image}" class="modal-img float" alt="..."></td>
+							<td>${product.productname}</td>
+							<td>${product.size}</td>
+							<td>${product.gender}</td>
+							<td>@${product.detail}</td>
+							<td>${product.category}</td>
+              <td>${product.price}</td>
+							<td><button type="button" class="pyong-btn">
+							수정하기</button></td>
+							<td><button type="button" class="pyong-btn">
+							삭제</button></td>
+							
+						</tr>
+						
+					</c:forEach>
+						
+				</tbody>
+			</table>
 
 	
         

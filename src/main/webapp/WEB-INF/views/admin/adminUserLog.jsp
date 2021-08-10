@@ -21,6 +21,7 @@
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li><a href="/admin/main" class="link-dark rounded">상품 수정 / 삭제</a></li>
                   <li><a href="/admin/productRegister" class="link-dark rounded">상품 생성</a></li>
+                  <li><a href="/admin/userLog" class="link-dark rounded">회원 로그</a></li>
                 </ul>
               </div>
             </li>
