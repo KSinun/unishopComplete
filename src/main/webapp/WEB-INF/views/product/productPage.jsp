@@ -128,6 +128,6 @@
 
 
 </div>
-
+</div>
 
 <%@ include file="../layout/footer.jsp"%>

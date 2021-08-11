@@ -19,6 +19,8 @@ public class Buy {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	private String paymenttime;
+
 
 	@JoinColumn(name = "product_id")
 	@ManyToOne

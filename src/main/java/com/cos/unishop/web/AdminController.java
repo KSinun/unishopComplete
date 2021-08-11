@@ -3,6 +3,7 @@ package com.cos.unishop.web;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpSession;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.cos.unishop.domain.buy.Buy;
+import com.cos.unishop.domain.buy.BuyRepository;
 import com.cos.unishop.domain.payment.Payment;
 import com.cos.unishop.domain.product.Product;
 import com.cos.unishop.domain.product.ProductDto;
@@ -29,6 +32,7 @@ public class AdminController {
 
 	private final ProductRepository productRepository;
 	private final UserRepository userRepository;
+	private final BuyRepository buyRepository;
 	private final HttpSession session;
 
 	// 관리자페이지 메인ㄱㄱ
@@ -46,7 +50,10 @@ public class AdminController {
 
 	//관리자 회원구메로그 페이지 ㄱㄱ
 	@GetMapping("/admin/userLog")
-	public String adminUserLog() {
+	public String adminUserLog(Model model) {
+
+		List<Buy> buyEntity = buyRepository.findAll();
+		model.addAttribute("buyEntity", buyEntity);
 		return "admin/adminUserLog";
 	}
 	

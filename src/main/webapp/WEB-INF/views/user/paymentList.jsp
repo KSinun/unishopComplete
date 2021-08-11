@@ -4,7 +4,7 @@
 
  <main>
     <!--side bar-->
-      <div class="sidebars">
+      <div class="sidebars" style="padding-bottom: 500px;">
         <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
           <a href="#" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
             <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
@@ -12,14 +12,13 @@
           </a>
           <ul class="list-unstyled ps-0">
             <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                Service Information
-              </button>
-              <div class="collapse show" id="home-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="/CommentsManagement" class="link-dark rounded">Comments management</a></li>
-                  <li><a href="/bucket/${principal.id}" class="link-dark rounded">Shopping bucket</a></li>
-                  <li><a href="/payment/${principal.id}" class="link-dark rounded">Payment list</a></li>
+          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse"	aria-expanded="true">
+            서비스 정보</button>
+					<div class="collapse show" id="home-collapse">
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><a href="/CommentsManagement" class="link-dark rounded">댓글 관리</a></li>
+							<li><a href="/bucket/${principal.id}" class="link-dark rounded">장바구니</a></li>
+							<li><a href="/payment/${principal.id}" class="link-dark rounded">구매 목록</a></li>
                 </ul>
               </div>
             </li>
@@ -49,26 +48,9 @@
                 </ul>
               </div>
             </li> -->
-            <li class="border-top my-3"></li>
-            <li class="mb-1">
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                Account
-              </button>
-              <div class="collapse" id="account-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <!-- <li><a href="#" class="link-dark rounded">New...</a></li> -->
-                  <li><a href="#" class="link-dark rounded">Profile modification</a></li>
-                  <li><a href="#" class="link-dark rounded">Settings</a></li>
-                  <li><a href="#" class="link-dark rounded">Sign out</a></li>
-                </ul>
-              </div>
-            </li>
           </ul>
         </div>
-      </div>
-    <!--side bar End-->
-
-    <!--컨텐츠 영역 section-->
+        <!--컨텐츠 영역 section-->
       <section class="section">
         <div>
           <h2>Payment list</h2>
@@ -87,30 +69,6 @@
           
          
           <div class="input-comments">
-            <!-- Button trigger modal -->
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #f5f5f5; border:  #f8f9fa; color: #383838;" >
-              상품평 쓰기
-            </button> -->
-
-            <!-- Modal -->
-            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
 
           <!-- 장바구니 테이블 -->
           <!-- DB에서 가져와서 던져줌 -->
@@ -175,15 +133,40 @@
                   <td>
                     <div class="info-align-box">
                       <!-- 여기에 EL표현식으로 가격을 받아옵니다 -->
-                     ${buy.product.price}$
+                     ${buy.product.price}
                     </div>
                   </td>
-
+                  <!-- 수량 -->
+                  <!-- 수량 컴포넌트 추가 -->
+                  <td>
+                    <div class="info-align-box">
+                      
+                        <!-- 여기에 수량 박스 추가 -->
+                        <div>
+                          <input class="num-wrap" value="2" readonly>
+                        </div>
+                        
+                        <!-- <div class="up-and-down">
+                          <img src="https://img.icons8.com/material-outlined/24/000000/up.png"/>
+                          <img src="https://img.icons8.com/material-outlined/24/000000/down--v1.png"/>
+                        </div> -->
+                      
+                    </div>
+                  </td>
+                  <!-- 합계 -->
+                  <!-- 계산되어서 되는 합계 추가 -->
+                  <td>
+                    <div class="info-align-box">
+                      <div>
+                        <input class="all-count" value="47.98$" readonly>
+                      </div>
+                      
+                    </div>
+                  </td>
                   <!-- <td>
                     <div class="info-align-box">
                       <button type="button" class="btn btn-danger">
                         삭제
-
                       </button>
                     </div>
                   </td> -->
@@ -268,21 +251,7 @@
               <!-- 한줄 종료 -->
 
 
-              <!-- 한줄 시작 -->
-              <tr>
-                <!-- th, for문으로 돌립니다 -->
-                <!-- 나중에 여기에 EL 표현식으로 뿌려줍니다 -->
-                <th scope="row">
-                  <!-- 체크박스 -->
-                  <div class="info-align-box">
-                    <!-- <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                      
-                      </label>
-                    </div> -->
-                  </div>
-                </th>
+              
 
 
 
@@ -317,6 +286,10 @@
 
         
       </section>
+      </div>
+    <!--side bar End-->
+
+    
 
     
     

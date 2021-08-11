@@ -42,7 +42,7 @@ public class CommentController {
 		//저장해야하는거
 		//등록일자
 		Comment comment = new Comment();
-		SimpleDateFormat format2 = new SimpleDateFormat ( "yyyy년 MM월dd일 HH시mm분ss초");
+		SimpleDateFormat format2 = new SimpleDateFormat ( "yyyy년 MM월 dd일\rHH:mm:ss");
 		Date time = new Date();
 				
 		String time1 = format2.format(time);

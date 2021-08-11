@@ -53,7 +53,7 @@
 
         
         
-        <table class="table">
+        <table class="table" id="width-max">
 				<thead class="category-management">
 					<tr>
 						<th scope="col">#</th>

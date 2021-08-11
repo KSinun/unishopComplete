@@ -144,3 +144,11 @@ hr {
 .checkbox-area {
   height: 40px;
 }
+
+.member-comments-boxes {
+  display: flex;
+  flex-direction: column;
+}
+#width-max {
+  width: 100%;
+}

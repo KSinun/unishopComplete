@@ -18,15 +18,12 @@
 				<li class="mb-1">
 					<button class="btn btn-toggle align-items-center rounded collapsed"
 						data-bs-toggle="collapse" data-bs-target="#home-collapse"
-						aria-expanded="true">Service Information</button>
+						aria-expanded="true">서비스 정보</button>
 					<div class="collapse show" id="home-collapse">
 						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/CommentsManagement" class="link-dark rounded">Comments
-									management</a></li>
-							<li><a href="/bucket/${principal.id}" class="link-dark rounded">Shopping
-									bucket</a></li>
-							<li><a href="/payment/${principal.id}"
-								class="link-dark rounded">Payment list</a></li>
+							<li><a href="/CommentsManagement" class="link-dark rounded">댓글 관리</a></li>
+							<li><a href="/bucket/${principal.id}" class="link-dark rounded">장바구니</a></li>
+							<li><a href="/payment/${principal.id}" class="link-dark rounded">구매 목록</a></li>
 						</ul>
 					</div>
 				</li>
@@ -56,21 +53,7 @@
                 </ul>
               </div>
             </li> -->
-				<li class="border-top my-3"></li>
-				<li class="mb-1">
-					<button class="btn btn-toggle align-items-center rounded collapsed"
-						data-bs-toggle="collapse" data-bs-target="#account-collapse"
-						aria-expanded="false">Account</button>
-					<div class="collapse" id="account-collapse">
-						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<!-- <li><a href="#" class="link-dark rounded">New...</a></li> -->
-							<li><a href="#" class="link-dark rounded">Profile
-									modification</a></li>
-							<li><a href="#" class="link-dark rounded">Settings</a></li>
-							<li><a href="#" class="link-dark rounded">Sign out</a></li>
-						</ul>
-					</div>
-				</li>
+
 			</ul>
 		</div>
 	</div>
@@ -89,12 +72,12 @@
 			<!-- <h4>내가 쓴 상품평</4> -->
 		</div>
 		<!-- 고객 상품평 -->
-		<section class="member-comments-box">
+		<section class="member-comments-boxes">
 
 
 			<!-- 댓글 테이블 -->
 			<!-- DB에서 가져와서 던져줌 -->
-			<table class="table">
+			<table class="table" id="width-max">
 				<thead class="category-management">
 					<tr>
 						<th scope="col">#</th>

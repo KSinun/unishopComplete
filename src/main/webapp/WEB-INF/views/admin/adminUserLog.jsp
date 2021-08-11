@@ -3,8 +3,7 @@
 
 <%@ include file="../layout/header.jsp"%>
 
-
-<main class="sidebar-main">
+<main class="sidebar-main" style="justify-content: flex-start;">
     <!--side bar-->
       <div class="sidebars">
         <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
@@ -56,7 +55,7 @@
         <br>
         <!-- log 테이블 -->
         <!-- DB에서 가져와서 던져줌 -->
-        <table class="table">
+        <table class="table" style="text-align: center;">
           <thead>
             <tr>
               <th scope="col"></th>
@@ -72,12 +71,14 @@
             </tr>
           </thead>
           <tbody>
+            <c:forEach var="buyEntity" items="${buyEntity}">
             <tr>
+            
               <th scope="row">
                 <!-- 체크박스 -->
                 <div class="info-align-box">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" name="id" value="${buyEntity.id}" id="${buyEntity.id}">
                     <label class="form-check-label" for="flexCheckDefault">
                     
                     </label>
@@ -87,36 +88,36 @@
               <!-- increment number -->
               <th scope="row">3</th>
               <!-- id -->
-              <td>lovepeople</td>
+               <!-- id -->
+              <td>${buyEntity.user.username}</td>
               <!-- real name -->
-              <td>Nick</td>
+              <td>@${buyEntity.user.name}</td>
               <!-- address -->
-              <td>S. F 36349</td>
+              <td>${buyEntity.user.address}</td>
               <!-- time -->
-              <td>21-07-27</td>
+              <td>${buyEntity.paymenttime}</td>
 
               <!-- 모달 영역 -->
+
               <td>
-                <div id="modal">
+                
     
                   <div id="root">
-                    <button type="button" class="btn btn-light" id="modal_open_btn">product list</button>
+                    <button type="button" class="btn btn-light" id="modal_opne_btn">상품 리스트</button>
                     <!-- <button type="button" id="modal_open_btn"></button> -->
                        
                   </div>
 
-
+                  <div id="modal">
                   <!-- 여기에 DB에서 product 주문 목록을 가져옵니다. -->
-                  <div class="modal_content">
+                  <div class="modal-content">
                       
-                    <!-- 상품이름 -->
-                      <p>productName: ${orderProductListEntity.productName}</p>
+                      <!-- 상품이름 -->
+                      <p>상품명</p><p style="font-weight: bold;">${buyEntity.product.productname}</p>
                       <!-- 상품 코드 -->
-                      <p>productCode: ${orderProductListEntity.productCode}</p>
-                      <!-- 상품 갯수 -->
-                      <p>productCount: ${orderProductListEntity.productCount}</p>
+                      <p>상품코드</p><p style="font-weight: bold;">${buyEntity.product.id}</p>
                       <!-- 상품 사이즈 -->
-                      <p>productSize: ${orderProductListEntity.productSize}</p>
+                      <p>상품사이즈</p><p style="font-weight: bold;">${buyEntity.product.size}</p>
                       
                       <button type="button" class="btn btn-light" id="modal_close_btn">close</button>
                     
@@ -129,8 +130,8 @@
               </td>
 
             </tr>
-            
            
+            </c:forEach>
           </tbody>
         </table>
 
@@ -143,7 +144,7 @@
                 <div>전체선택</div>
               </label>
             </div>
-            <button type="button" class="btn btn-danger">
+            <button type="button" onclick="deleteCheck()" class="btn-util">
               배송완료
 
             </button>
@@ -152,10 +153,11 @@
         </div>
       </section>
 
-
-
-
-
-
     </main>
+
+
+<script src="/js/adminmodal.js"></script>
+<script src="/js/admin.js"></script>
+
+
 <%@ include file="../layout/footer.jsp"%>
