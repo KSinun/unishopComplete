@@ -7,11 +7,6 @@
   justify-content: center;
 }
 
-.sidebars {
-  display: flex;
-  flex: 1;
-}
-
 .contents-container {
   display: flex;
   flex-flow: column;

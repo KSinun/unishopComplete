@@ -16,10 +16,6 @@
   border-style: solid;
 }
 
-.sidebars {
-  display: flex;
-}
-
 hr {
   width: 1200px;
   margin: 0 auto;

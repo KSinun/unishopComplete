@@ -4,7 +4,7 @@
 <%@ include file="../layout/header.jsp"%>
 
 
-<main>
+<main class="sidebar-main">
     <!--side bar-->
       <div class="sidebars">
         <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
@@ -43,7 +43,7 @@
 
     <!--Admin section-->
       
-      <section class="section">
+      <section class="section-log">
         <div>
           <h2>New Orders</h2>
         </div>
@@ -56,19 +56,19 @@
         <br>
         <!-- log 테이블 -->
         <!-- DB에서 가져와서 던져줌 -->
-        <table class="table" style="">
+        <table class="table">
           <thead>
             <tr>
               <th scope="col"></th>
               
               <th scope="col">#</th>
-              <th scope="col">UserId</th>
-              <th scope="col">UserName</th>
-              <th scope="col">Address</th>
-              <th scope="col">order-date-time</th>
+              <th scope="col">유저 아이디</th>
+              <th scope="col">유저 이름</th>
+              <th scope="col">주소</th>
+              <th scope="col">주문 날짜 / 시간</th>
 
               <!-- modal 써서 product 목록 완성 -->
-              <th scope="col">product</th>
+              <th scope="col">주문 상품</th>
             </tr>
           </thead>
           <tbody>
@@ -129,119 +129,7 @@
               </td>
 
             </tr>
-            <tr>
-              <th scope="row">
-                <!-- 체크박스 -->
-                <div class="info-align-box">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                    
-                    </label>
-                  </div>
-                </div>
-              </th>
-              <!-- increment number -->
-              <th scope="row">2</th>
-              <!-- id -->
-              <td>markgod</td>
-              <!-- real name -->
-              <td>Mark</td>
-              <!-- address -->
-              <td>L. A street 30349</td>
-              <!-- time -->
-              <td>21-07-25</td>
-
-
-              <!-- 모달 영역 -->
-              <td>
-                <div id="modal">
-    
-                  <div id="root">
-                    <button type="button" class="btn btn-light" id="modal_open_btn">product list</button>
-                    <!-- <button type="button" id="modal_open_btn"></button> -->
-                       
-                  </div>
-
-
-                  <!-- 여기에 DB에서 product 주문 목록을 가져옵니다. -->
-                  <div class="modal_content">
-                      
-                    <!-- 상품이름 -->
-                      <p>productName: ${orderProductListEntity.productName}</p>
-                      <!-- 상품 코드 -->
-                      <p>productCode: ${orderProductListEntity.productCode}</p>
-                      <!-- 상품 갯수 -->
-                      <p>productCount: ${orderProductListEntity.productCount}</p>
-                      <!-- 상품 사이즈 -->
-                      <p>productSize: ${orderProductListEntity.productSize}</p>
-                      
-                      <button type="button" class="btn btn-light" id="modal_close_btn">close</button>
-                    
-                      <!-- <button type="button" id="modal_close_btn">close</button> -->
-                    
-                  </div>
-                
-                  <div class="modal_layer"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <!-- 체크박스 -->
-                <div class="info-align-box">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                    
-                    </label>
-                  </div>
-                </div>
-              </th>
-              <!-- increment number -->
-              <th scope="row">1</th>
-              <!-- id -->
-              <td>markgod</td>
-              <!-- real name -->
-              <td>Mark</td>
-              <!-- address -->
-              <td>L.A street 30349</td>
-              <!-- time -->
-              <td>21-07-23</td>
-
-              <!-- 모달 영역 -->
-              <td>
-                <div id="modal">
-    
-                  <div id="root">
-                    <button type="button" class="btn btn-light" id="modal_open_btn">product list</button>
-                    <!-- <button type="button" id="modal_open_btn"></button> -->
-                       
-                  </div>
-
-
-                  <!-- 여기에 DB에서 product 주문 목록을 가져옵니다. -->
-                  <div class="modal_content">
-                      
-                    <!-- 상품이름 -->
-                      <p>productName: ${orderProductListEntity.productName}</p>
-                      <!-- 상품 코드 -->
-                      <p>productCode: ${orderProductListEntity.productCode}</p>
-                      <!-- 상품 갯수 -->
-                      <p>productCount: ${orderProductListEntity.productCount}</p>
-                      <!-- 상품 사이즈 -->
-                      <p>productSize: ${orderProductListEntity.productSize}</p>
-                      
-                      <button type="button" class="btn btn-light" id="modal_close_btn">close</button>
-                    
-                      <!-- <button type="button" id="modal_close_btn">close</button> -->
-                    
-                  </div>
-                
-                  <div class="modal_layer"></div>
-                </div>
-              </td>
-            </tr>
+            
            
           </tbody>
         </table>
